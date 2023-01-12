@@ -1,7 +1,7 @@
-import {useState} from 'react'
 import heroMobile from './assets/hero-mobile.jpg'
 import heroDesktop from './assets/hero-desktop.jpg'
 import logoSvg from './assets/logo.svg'
+import iconArrowSvg from './assets/icon-arrow.svg'
 import './App.scss'
 
 function App() {
@@ -9,6 +9,9 @@ function App() {
     return (
         <main className="App">
 
+            <header>
+                <img src={logoSvg} alt="shop logo"/>
+            </header>
 
             <picture>
                 <source srcSet={heroDesktop} media="(min-width: 600px)"/>
@@ -16,9 +19,6 @@ function App() {
             </picture>
 
             <div className={'info'}>
-                <header>
-                    <img src={logoSvg} alt="shop logo"/>
-                </header>
 
                 <h1>
                     <span className={'highlight'}>WE'RE</span> coming soon
@@ -32,7 +32,7 @@ function App() {
                 <form>
                     <div className={'input-wrapper'}>
                         <input type="text" placeholder={'Email Address'}/>
-                        <button type='submit'> {'>'} </button>
+                        <button type='submit'><img src={iconArrowSvg} alt=""/></button>
                     </div>
 
                 </form>
