@@ -9,31 +9,35 @@ function App() {
     return (
         <main className="App">
 
-            <header>
-                <img src={logoSvg} alt="shop logo"/>
-            </header>
 
             <picture>
                 <source srcSet={heroDesktop} media="(min-width: 600px)"/>
                 <img src={heroMobile} alt=""/>
             </picture>
 
-            <h1>
-                <span className={'highlight'}>WE'RE</span> coming soon
-            </h1>
+            <div className={'info'}>
+                <header>
+                    <img src={logoSvg} alt="shop logo"/>
+                </header>
 
-            <p>
-                Hello fellow shoppers! We're currently building our new fashion store.
-                Add your email below to stay up-to-date with announcements an our launch deals.
-            </p>
+                <h1>
+                    <span className={'highlight'}>WE'RE</span> coming soon
+                </h1>
 
-            <form>
-                <div className={'input-wrapper'}>
-                    <input type="text" placeholder={'Email Address'}/>
-                    <button type='submit'> {'>'} </button>
-                </div>
+                <p>
+                    Hello fellow shoppers! We're currently building our new fashion store.
+                    Add your email below to stay up-to-date with announcements an our launch deals.
+                </p>
 
-            </form>
+                <form>
+                    <div className={'input-wrapper'}>
+                        <input type="text" placeholder={'Email Address'}/>
+                        <button type='submit'> {'>'} </button>
+                    </div>
+
+                </form>
+            </div>
+
         </main>
     )
 }
