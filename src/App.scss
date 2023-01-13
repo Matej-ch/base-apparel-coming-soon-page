@@ -11,6 +11,10 @@
     }
   }
 
+  picture img {
+    width: 100%;
+  }
+
   h1 {
     padding: 2.75rem 1.75rem 0 1.75rem;
     font-size: 2.5rem;
@@ -65,6 +69,10 @@
 }
 
 @media screen and (min-width: 600px) {
+  #root {
+    height: 100%;
+  }
+
   .App {
     grid-template-areas:
             "info img";
@@ -72,6 +80,7 @@
     background: url("./assets/bg-pattern-desktop.svg");
     background-repeat: no-repeat;
     background-position: left bottom;
+    background-size: cover;
 
     .info {
       grid-area: info;
@@ -80,15 +89,23 @@
     }
 
     header {
-      padding: 4rem 0 1rem 0;
+      grid-area: info;
+      padding: 4rem 10.5rem 1rem 10.5rem;
 
       img {
         width: 155px;
       }
     }
 
+    picture img {
+      width: unset;
+      height: 100%;
+      object-fit: cover;
+    }
+
     h1 {
-      padding: 7.5rem 0 1rem 0;
+      margin-top: 14.5rem;
+      padding: 0 0 1rem 0;
       font-size: 4rem;
       text-align: left;
       line-height: 4.2rem;
