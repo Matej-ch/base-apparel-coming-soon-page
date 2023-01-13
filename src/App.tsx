@@ -24,6 +24,7 @@ function App() {
             return;
         }
 
+        // @ts-ignore
         if (!emailInputValue.match(mailformat)) {
             setErrorMsg('Please provide a valid email');
             return;
@@ -59,7 +60,7 @@ function App() {
                 <form onSubmit={handleSubmit}>
                     <div className={'input-wrapper'}>
                         <input type="text" name={'email'} placeholder={'Email Address'}/>
-                        <button type='submit'><img src={iconArrowSvg} alt=""/></button>
+                        <button type='submit' aria-label={'submit form'}><img src={iconArrowSvg} alt=""/></button>
                         {errorMsg.length ? <img className={'error-icon'} src={iconErrorSvg} alt=""/> : null}
                         {errorMsg.length ? <span className={'error-msg'}>{errorMsg}</span> : null}
                     </div>
