@@ -68,6 +68,27 @@
   letter-spacing: 10px;
 }
 
+.error-msg {
+  color: red;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: -35px;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.error-icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  z-index: -1;
+  margin-right: 4.75rem;
+}
+
 @media screen and (min-width: 600px) {
   #root {
     height: 100%;
@@ -123,6 +144,11 @@
       margin: 2.25rem 0 0;
       padding: 0.75rem 1.5rem 0.75rem 1.5rem;
       max-width: 440px;
+      isolation: isolate;
+
+      input {
+        width: calc(100% - 7.25rem);
+      }
     }
 
     button {
@@ -136,5 +162,9 @@
 
   .highlight {
     letter-spacing: 16px;
+  }
+
+  .error-icon {
+    margin-right: 6.75rem;
   }
 }
