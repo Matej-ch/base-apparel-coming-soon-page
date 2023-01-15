@@ -92,6 +92,8 @@
 @media screen and (min-width: 600px) {
   #root {
     height: 100%;
+    display: grid;
+    place-content: center;
   }
 
   .App {
@@ -102,6 +104,11 @@
     background-repeat: no-repeat;
     background-position: left bottom;
     background-size: cover;
+
+    max-width: 1600px;
+    margin: 0 auto;
+    max-height: 800px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
     .info {
       grid-area: info;
